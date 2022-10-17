@@ -83,11 +83,13 @@ const books = [
 
 const list = document.querySelector('#viewbooks');
 
+let activeBook = 0;
+
 const generateBooks = () => {
     list.innerHTML ='';
-    books.forEach((slide) =>{
+    books.forEach((slide, index) =>{
         list.innerHTML += `
-        <li>
+        <li class="d-none ${index === activeBook ? 'active': ''}">
             <p class="book_listTitle">Tytuł: ${slide.title}</p>
             <p>Rok napisania: ${slide.year}</p>
             <p>Kategoria: ${slide.category}</p>

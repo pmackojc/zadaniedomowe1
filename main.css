@@ -29,3 +29,11 @@
   width: 200px;
   margin: 10px 0;
  }
+
+ .d-none {
+  display: block;
+}
+
+.active {
+  display: block;
+}
