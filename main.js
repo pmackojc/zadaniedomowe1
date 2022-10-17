@@ -88,11 +88,11 @@ const generateBooks = () => {
     books.forEach((slide) =>{
         list.innerHTML += `
         <li>
-            <p>${slide.title}</p>
-            <p>${slide.year}</p>
-            <p>${slide.category}</p>
-            <p>${slide.author}</p>
-            <img src=${slide.source} alt=${slide.alt} class="slider__photo"/>  
+            <p class="book_listTitle">Tytuł: ${slide.title}</p>
+            <p>Rok napisania: ${slide.year}</p>
+            <p>Kategoria: ${slide.category}</p>
+            <p>Autor: ${slide.author}</p>
+            <img src=${slide.source} alt=${slide.alt} class="book__photo"/>  
         </li>`
         
     })

@@ -3,3 +3,29 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  body {
+    font-family: "Arial", sans-sarif;
+  }
+
+  .viewbooks {
+    list-style: none;
+  }
+
+  .book_container {
+    margin: 40px auto;
+    max-width: 500px;
+  }
+
+  .book_title {
+    text-align: center;
+  }
+
+  .book_listTitle {
+    text-decoration: underline;
+  }
+
+ .book__photo {
+  width: 200px;
+  margin: 10px 0;
+ }
