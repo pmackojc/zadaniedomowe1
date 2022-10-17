@@ -11,11 +11,13 @@
     <div class="book_container">
         <h1 class="book_title">Zbiór moich książek</h1>
 
-        <label for="searchBook">
-            Szukaj wybranej książki
-            <input id="searchBook" type="text" name="searchBook" placeholder="look fo this book">
-        </label>
-        <button class="book_button">Szukaj</button>
+        <form id="form">
+            <label for="searchBook">
+                Szukaj wybranej książki
+                <input id="searchBook" type="text" name="searchBook" placeholder="look fo this book">
+            </label>
+            <button type="submit" class="book_button">Szukaj</button>
+        </form>
 
         <ul id="viewbooks" class="viewbooks"/>
     </div>
