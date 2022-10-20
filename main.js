@@ -105,7 +105,7 @@ const generateBooks = (book) => {
     })
 }
 
-const searchBook =(event) =>{
+const searchBook = (event) =>{
     event.preventDefault();
 
     const isValid = validateForm();
@@ -116,8 +116,16 @@ const searchBook =(event) =>{
         return product.author === bookInput.value;
     })
 
+    clearBooks();
     generateBooks(foundBooks);
     bookInput.value ='';
+}
+
+const clearBooks = () =>{
+    event.preventDefault();
+
+    list.innerHTML ='';
+
 }
 
 generateBooks(books);

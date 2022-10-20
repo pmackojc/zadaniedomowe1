@@ -5,10 +5,14 @@
   }
 
   body {
+    background-color: yellow;
     font-family: "Arial", sans-sarif;
+    font-size: 26px;
   }
 
   .viewbooks {
+    background-color: red;
+    text-align: center;
     list-style: none;
   }
 
@@ -18,6 +22,8 @@
   }
 
   .book_title {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
   }
 
