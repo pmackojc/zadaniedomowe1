@@ -85,6 +85,7 @@ const list = document.querySelector('#viewbooks');
 const bookForm = document.querySelector('#form');
 const bookInput = document.querySelector('#searchBook');
 
+
 const validateForm = () => {
     return bookInput.value.length > 2;
   }
@@ -116,7 +117,6 @@ const searchBook =(event) =>{
     })
 
     generateBooks(foundBooks);
-
     bookInput.value ='';
 }
 
