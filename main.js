@@ -11,7 +11,7 @@ const books = [
         title:"NOS4A2",
         year: 2013,
         category:"horror",
-        source:"https://subterraneanpress.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/n/o/nos4a2-web.jpg",
+        source:"",
         alt:"Nosferatu",
         author:"Joe Hill"
     },
@@ -82,14 +82,18 @@ const books = [
 ]
 
 const list = document.querySelector('#viewbooks');
+const bookForm = document.querySelector('#form');
+const bookInput = document.querySelector('#searchBook');
 
-let activeBook = 0;
+const validateForm = () => {
+    return bookInput.value.length > 2;
+  }
 
-const generateBooks = () => {
-    list.innerHTML ='';
-    books.forEach((slide, index) =>{
+
+const generateBooks = (book) => {
+    book.forEach((slide) =>{
         list.innerHTML += `
-        <li class="d-none ${index === activeBook ? 'active': ''}">
+        <li>
             <p class="book_listTitle">Tytuł: ${slide.title}</p>
             <p>Rok napisania: ${slide.year}</p>
             <p>Kategoria: ${slide.category}</p>
@@ -100,4 +104,21 @@ const generateBooks = () => {
     })
 }
 
-generateBooks();
+const searchBook =(event) =>{
+    event.preventDefault();
+
+    const isValid = validateForm();
+    if(!isValid) return;
+
+
+    const foundBooks = books.filter(product =>{
+        return product.author === bookInput.value;
+    })
+
+    generateBooks(foundBooks);
+
+    bookInput.value ='';
+}
+
+generateBooks(books);
+bookForm.addEventListener('submit',searchBook);
