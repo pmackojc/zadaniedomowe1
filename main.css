@@ -5,15 +5,26 @@
   }
 
   body {
-    background-color: yellow;
+    background-color: orange;
     font-family: "Arial", sans-sarif;
     font-size: 26px;
   }
 
   .viewbooks {
-    background-color: red;
+    background-color: white;
     text-align: center;
     list-style: none;
+  }
+
+  .singleBook {
+    margin: 20px auto;
+    padding: 10px;
+
+  }
+
+  hr {
+    border: 2px solid black;
+    
   }
 
   .book_container {

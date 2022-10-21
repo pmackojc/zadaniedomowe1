@@ -94,12 +94,13 @@ const validateForm = () => {
 const generateBooks = (book) => {
     book.forEach((slide) =>{
         list.innerHTML += `
-        <li>
+        <li class="singleBook">
             <p class="book_listTitle">Tytuł: ${slide.title}</p>
             <p>Rok napisania: ${slide.year}</p>
             <p>Kategoria: ${slide.category}</p>
             <p>Autor: ${slide.author}</p>
             <img src=${slide.source} alt=${slide.alt} class="book__photo"/>  
+            <hr></hr>    
         </li>`
         
     })
