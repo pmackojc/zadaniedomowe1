@@ -84,10 +84,13 @@ const books = [
 const list = document.querySelector('#viewbooks');
 const bookForm = document.querySelector('#form');
 const bookInput = document.querySelector('#searchBook');
+const searchError = document.querySelector('#error');
 
 
 const validateForm = () => {
-    return bookInput.value.length > 2;
+    if(bookInput.value.length < 3){
+        searchError.innerHTML = "błąd";
+    }else searchError.innerHTML = '';
   }
 
 
@@ -109,8 +112,7 @@ const generateBooks = (book) => {
 const searchBook = (event) =>{
     event.preventDefault();
 
-    const isValid = validateForm();
-    if(!isValid) return;
+    validateForm();
 
 
     const foundBooks = books.filter(product =>{
