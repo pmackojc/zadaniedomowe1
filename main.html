@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="book_container">
-        <h1 class="book_title">Zbiór moich książek</h1>
 
+    <h1 class="book_title">Zbiór moich książek</h1>
+    <div class="book_container">
+        
         <form id="form">
             <label for="searchBook">
-                Szukaj wybranej książki
+                Szukaj wybranego autora
                 <input id="searchBook" type="text" name="searchBook" placeholder="look fo this book">
             </label>
             <button type="submit" class="book_button">Szukaj</button>
-            <p id="error"></p>
+            <p id="error" class="error"></p>
         </form>
 
         <ul id="viewbooks" class="viewbooks"/>

@@ -28,7 +28,7 @@
   }
 
   .book_container {
-    margin: 40px auto;
+    margin: 30px auto;
     max-width: 500px;
   }
 
@@ -36,6 +36,8 @@
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    background-color: brown;
+    padding: 30px;
   }
 
   .book_listTitle {
@@ -45,4 +47,11 @@
  .book__photo {
   width: 200px;
   margin: 10px 0;
+ }
+
+ .error {
+    background-color: red;
+    text-align: center;
+    margin: 3px auto;
+    font-weight: bold;
  }

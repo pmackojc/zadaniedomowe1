@@ -11,7 +11,7 @@ const books = [
         title:"NOS4A2",
         year: 2013,
         category:"horror",
-        source:"",
+        source:"https://www.torontopubliclibrary.ca/content/reading-challenge/images/reading-challenge-hero.jpg",
         alt:"Nosferatu",
         author:"Joe Hill"
     },
@@ -89,7 +89,7 @@ const searchError = document.querySelector('#error');
 
 const validateForm = () => {
     if(bookInput.value.length < 3){
-        searchError.innerHTML = "błąd";
+        searchError.innerHTML = "ZA MAŁO ZNAKÓW";
     }else searchError.innerHTML = '';
   }
 
